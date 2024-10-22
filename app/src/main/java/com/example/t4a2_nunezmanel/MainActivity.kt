@@ -1,13 +1,16 @@
 package com.example.t4a2_nunezmanel
 
+import android.content.Intent
 import android.os.Bundle
 import android.renderscript.ScriptGroup.Binding
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.t4a2_nunezmanel.databinding.ActivityLoginBinding
 import com.example.t4a2_nunezmanel.databinding.ActivityMainBinding
+import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +24,14 @@ class MainActivity : AppCompatActivity() {
         val usuario_tv = binding.usuarioInfoTv
 
         usuario_tv.text = intent.getStringExtra("Usuario")
+
+        val password = intent.getStringExtra("Password")
+
+        val btn_salir = binding.salir
+
+        btn_salir.setOnClickListener {
+            exitProcess(0)
+        }
 
 
         super.onCreate(savedInstanceState)

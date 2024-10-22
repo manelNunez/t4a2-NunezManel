@@ -6,4 +6,12 @@
     </style>
 
     <style name="Theme.T4a2NunezManel" parent="Base.Theme.T4a2NunezManel" />
+    
+    
+    <style name="Theme.T4a2NunezManel.TemaPropio">
+
+        <item name="colorPrimary">@color/lila </item>
+        <item name="fontFamily">@font/gatewayheaven</item>
+        
+    </style>
 </resources>
