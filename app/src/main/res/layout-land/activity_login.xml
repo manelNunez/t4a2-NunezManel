@@ -8,15 +8,26 @@
     tools:context=".LoginActivity">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/login_gl"
+        android:id="@+id/login_glh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.33"
+        app:layout_constraintGuide_percent="0.5"
 
         >
 
 
+
+    </androidx.constraintlayout.widget.Guideline>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_glv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+
+        >
 
     </androidx.constraintlayout.widget.Guideline>
 
@@ -25,14 +36,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginBottom="@dimen/margin_default"
         android:layout_marginEnd="16dp"
         android:text="@string/iniciar_sesion"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintBottom_toTopOf="@id/usuario_til">
 
 
     </com.google.android.material.textview.MaterialTextView>
@@ -41,13 +52,12 @@
         android:id="@+id/usuario_til"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="@dimen/margin_login_land"
+        android:layout_marginEnd="@dimen/margin_login_land"
         app:helperText="@string/obligatorio"
+        app:layout_constraintBottom_toTopOf="@id/login_glh"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/login_gl">
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/usuario_tiet"
@@ -67,14 +77,14 @@
         android:id="@+id/password_til"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="@dimen/margin_login_land"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_login_land"
         app:helperText="@string/obligatorio"
         app:endIconMode="password_toggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_gl">
+        app:layout_constraintTop_toBottomOf="@id/login_glh">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password_tiet"
@@ -94,28 +104,25 @@
         android:id="@+id/enviar_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_margin="@dimen/margin_default"
         android:text="@string/entrar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_til">
+        app:layout_constraintEnd_toStartOf="@+id/login_glv"
+        app:layout_constraintTop_toBottomOf="@+id/password_til"
+
+        >
     </com.google.android.material.button.MaterialButton>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/salir_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_margin="@dimen/margin_default"
         android:text="@string/salir"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_til">
+        app:layout_constraintStart_toEndOf="@id/login_glv"
+        app:layout_constraintTop_toBottomOf="@id/password_til"
+
+
+        >
     </com.google.android.material.button.MaterialButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

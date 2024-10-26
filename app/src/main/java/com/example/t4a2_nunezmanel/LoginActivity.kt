@@ -33,11 +33,11 @@ class LoginActivity : AppCompatActivity() {
                 if (usuario.text.toString().matches(Regex("\\d{8}[a-zA-Z]?"))) {
                     binding.usuarioTil.error = null
                 } else {
-                    binding.usuarioTil.error = "Introduce un DNI correcto de 8 digitos y una letra"
+                    binding.usuarioTil.error = ""+R.string.dni_correcto
                     validation = false
                 }
             } else {
-                binding.usuarioTil.error = "Introduce un DNI incorrecto"
+                binding.usuarioTil.error = "Introduce un DNI correcto"
                 validation = false
             }
             if (password.text.toString().length > 8) {
