@@ -105,5 +105,6 @@
     <string name="cajeros">Cajeros</string>
     <string name="introduce_usuario">Introduce usuario</string>
     <string name="iniciar_sesion">Iniciar Sesion</string>
-    <string name="dni_correcto">Introduce un DNI correcto de 8 digitos y una letra</string>
+    <string name="fab">FAB</string>
+    <string name="avatar">Avatar</string>
 </resources>
