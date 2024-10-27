@@ -107,4 +107,8 @@
     <string name="iniciar_sesion">Iniciar Sesion</string>
     <string name="fab">FAB</string>
     <string name="avatar">Avatar</string>
+    <string name="introduce_tu_contrasena_actual">Introduce tu contraseña actual</string>
+    <string name="introduce_la_contrasena_nueva">Introduce la contraseña nueva</string>
+    <string name="cambiar">Cambiar</string>
+    <string name="volver">Volver</string>
 </resources>

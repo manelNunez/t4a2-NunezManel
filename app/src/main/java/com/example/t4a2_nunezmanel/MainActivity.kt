@@ -28,9 +28,19 @@ class MainActivity : AppCompatActivity() {
         val password = intent.getStringExtra("Password")
 
         val btn_salir = binding.salir
+        val btn_cambiarContrasena = binding.cambiarContrasena
 
         btn_salir.setOnClickListener {
             exitProcess(0)
+        }
+
+        btn_cambiarContrasena.setOnClickListener{
+
+            val intent: Intent = Intent(this,CambiarContrasena::class.java)
+            intent.putExtra("Password",password)
+            intent.putExtra("Usuario",usuario_tv.text)
+
+            startActivity(intent)
         }
 
 
